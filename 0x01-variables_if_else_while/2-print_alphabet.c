@@ -6,14 +6,16 @@
  * prints the alphabet in lowercase
  * Return: 0 Always (Success)
  */
-void lowercase(void)
-{
-for (int c = 97; c <= 122; ++c)
-putchar(c);
-}
+
 int main(void)
 {
-lowercase(void);
+char letter = "a";
+while(letter <= "z")
+{
+putchar(letter);
+letter++;
+}
+putchar("\n");
 
 return (0);
 }
