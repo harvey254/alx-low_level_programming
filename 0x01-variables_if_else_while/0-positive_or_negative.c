@@ -18,7 +18,7 @@ printf("%d is zero\n");
 }
 else
 {
-printf("% is negative\n");
+printf("%d is negative\n");
 }
 return (0);
 }
