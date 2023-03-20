@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <time.h>
-#include <stdlib>
+#include <stdlib.h>
 
 
 int main(void)
