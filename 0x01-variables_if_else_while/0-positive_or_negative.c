@@ -4,9 +4,9 @@
 
 /*betty style doc for function main goes there*/
 
-/*prints whether the number stored in variable n is positive or negative*/
 int main(void)
 {
+/*prints whether the number stored in variable n is positive or negative*/
 int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
