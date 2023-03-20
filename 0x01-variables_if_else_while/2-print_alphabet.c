@@ -6,7 +6,7 @@
  * prints the alphabet in lowercase
  * Return: 0 Always (Success)
  */
-lowercase(void)
+void lowercase(void)
 {
 for (int c = 97; c <= 122; ++c)
 putchar(c);
