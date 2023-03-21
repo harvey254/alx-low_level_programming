@@ -1,4 +1,3 @@
-
 #include "main.h"
 /**
  * main - Entry point
@@ -15,8 +14,4 @@ _putchar(c);
 c++;
 }
 }
-int main(void)
-{
-print_alphabet();
-return (0);
-}
+
