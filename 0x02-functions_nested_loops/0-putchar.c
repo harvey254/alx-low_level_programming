@@ -1,6 +1,11 @@
-#include "main.h"
+#include <main.h>
 
-void _putchar(char c);
+/**
+ * main -Entry point
+ * program that prints _putchar foolowed by new line
+ * Return: Always 0 (Success)
+ */
+
 int main()
 {
 _putchar('_');
