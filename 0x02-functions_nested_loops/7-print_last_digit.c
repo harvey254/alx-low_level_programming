@@ -12,12 +12,12 @@ int num;
 num = i % 10;
 if (num < 0)
 {
-_putchar(-num +48);
+_putchar(-num + 48);
 return (-num);
 }
 else
 {
-_putchar(num +48);
+_putchar(num + 48);
 return (num);
 }
 
