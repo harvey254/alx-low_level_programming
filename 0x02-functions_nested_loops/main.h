@@ -1,20 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-int _putchar(char c)
-{
-return (c);
-}
-void print_alphabet(void)
-{
-char letter = 'a';
-while (letter <= 'z')
-{
-putchar(letter);
-letter++;
-}
-putchar('\n');
-}
+int _putchar(char c);
 
-
-#endif /*MAIN_H*/
+void print_alphabet(void);
