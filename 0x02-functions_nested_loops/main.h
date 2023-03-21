@@ -1,9 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-void _putchar(char c)
+int _putchar(char c)
 {
-putchar(c)
+return (c);
 }
 
 
@@ -18,4 +18,4 @@ letter++;
 }
 _putchar('\n');
 
-#endif /*MAIN_H */
+#endif 
