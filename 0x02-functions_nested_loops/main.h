@@ -1,5 +1,3 @@
-#ifndef MAIN_H
-#define MAIN_H
 
 
 int _putchar(char c);
@@ -14,10 +12,4 @@ _putchar(letter);
 letter++;
 }
 _putchar('\n');
-}
 
-
-
-
-
-#endif /*MAIN_H*/
