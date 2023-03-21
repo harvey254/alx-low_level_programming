@@ -14,4 +14,4 @@ letter++;
 }
 _putchar('\n');
 
-#endif /* MAIN_H */
+#endif /*MAIN_H */
