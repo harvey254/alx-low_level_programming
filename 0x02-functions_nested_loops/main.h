@@ -1,7 +1,8 @@
-void _putchar(char c)
-{
-putchar(c);
-}
+#define MAIN_H
+
+
+int _putchar(char c);
+
 
 void print_alphabet(void)
 {
@@ -14,3 +15,8 @@ letter++;
 _putchar('\n');
 }
 
+
+
+
+
+#endif
