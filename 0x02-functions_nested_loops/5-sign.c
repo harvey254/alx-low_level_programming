@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- *print_sign - determines input number
- @n: input number as an integer
- * Return: 1 if n is greater than 0, 0 if n is zero and -1 if n is less than zero
+ * print_sign - Determines input number
+ * @n: input number as integer.
+ * Return: 1 greater than zero. 0 is zero. -1 less than zero.
  */
 
 int print_sign(int n)
