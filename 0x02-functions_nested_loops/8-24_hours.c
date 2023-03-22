@@ -16,7 +16,7 @@ if (h < 10)
 {
 _putchar('0');
 }
-_putchar(h +'0');
+_putchar(h + '0');
 _putchar(':');
 if (m < 10)
 {
