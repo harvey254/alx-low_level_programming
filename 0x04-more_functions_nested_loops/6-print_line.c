@@ -10,6 +10,7 @@ int n, i;
 if (n <= 0)
 {
 _putchar('\n');
+return;
 }
 for (int i = 0; i < n; i++)
 {
