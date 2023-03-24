@@ -1,20 +1,21 @@
-#include "main.h"
+#include "holberton.h"
+
 /**
  * print_line - draw a straight line
- * @n: number of times _ is printed
- * Return: no value
+ * @n: number of times underscore is printed
+ * Description: Can only use _putchar to print
  */
 void print_line(int n)
 {
-if (n <= 0)
-{
-_putchar('\n');
-break;
-}
-for (int i = 0; i < n; i++)
-{
-_putchar('_');
-}
-_putchar('\n');
+	int c;
+
+	c = 0;
+	while (c < n)
+	{
+		_putchar('_');
+
+		c++;
+	}
+	_putchar('\n');
 }
 
