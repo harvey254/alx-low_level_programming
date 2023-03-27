@@ -1,9 +1,9 @@
 #include "main.h"
 #include <string.h>
 /**
- * puts_half - prints half of a string
- * @str: string pointer 
- * Return: no value
+ *puts_half - prints half of a string
+ *@str: string pointer
+ *Return: no value
  */
 void puts_half(char *str)
 {
@@ -13,7 +13,7 @@ void puts_half(char *str)
 
 	if (length % 2 == 0)
 	{
-		start_index = length /2;
+		start_index = length / 2;
 	}
 	else
 	{
