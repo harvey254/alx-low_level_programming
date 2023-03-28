@@ -16,7 +16,7 @@ int main(void)
 
 	for (i = 0; i < PASSWORD_LENGTH; i++)
 	{
-		password[i] = charset[rand() % sizeof(charset)]
+		password[i] = charset[rand() % sizeof(charset)];
 	}
 	password[PASSWORD_LENGTH] = '\0';
 
