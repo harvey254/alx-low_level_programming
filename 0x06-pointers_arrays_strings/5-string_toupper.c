@@ -1,10 +1,10 @@
 #include "main.h"
 /**
  * string_toupper - changes lowercase to uppercase
- * @stir: string value
+ * @str: string value
  * Return: uppercase string
  */
-char *string_toupper(char *str) 
+char *string_toupper(char *str)
 {
 	int i;
 
@@ -20,6 +20,6 @@ char *string_toupper(char *str)
 
 	}
 
-	return (st)r;
+	return (str);
 }
 
