@@ -6,20 +6,16 @@
  */
 char *string_toupper(char *str)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; str[i] != '\0'; i++)
+	while (str[i] != '\0')
 	{
-
 		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-
-			str[i] = str[i] - 'a' + 'A';
-
+			str[i] = str[i] - ('a' - 'A');
 		}
-
+		i++;
 	}
-
 	return (str);
 }
 
