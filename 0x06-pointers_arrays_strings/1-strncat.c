@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * _strcat - See description
+ * _strncat - See description
  * @dest: char type string
  * @src: char type string
  * @n: number of bytes
