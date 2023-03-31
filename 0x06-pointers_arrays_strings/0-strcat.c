@@ -1,29 +1,23 @@
-#include "main.h"
+#include "holberton.h"
+
 /**
- * _strcat - concatenates two strings
- * @dest: string values
- * @src: string value
- * Return: concatenated string value
+ * *_strcat - See description
+ * @dest: char type string
+ * @src: char type string
+ * Description: Copy the string pointed to by pointer `src` to
+ * the buffer pointed to by `dest`
+ * Return: Pointer to `dest`
  */
-char  *_strcat(char *dest, char *src)
+
+char *_strcat(char *dest, char *src)
 {
-	int i, len = 0;
+	int i;
 
-	while (dest[len] != '\0')
-
+	for (i = 0; src[i] != '\0'; i++)
 	{
-		len++;
-
+		dest[i] = src[i];
 	}
-	for (i = 0; src[i] != '\0'; i++, len++)
-	{
-
-		dest[len++] = src[i];
-
-	}
-
-	dest[len] = '\0';
+	dest[i] = '\0';
 
 	return (dest);
 }
-
