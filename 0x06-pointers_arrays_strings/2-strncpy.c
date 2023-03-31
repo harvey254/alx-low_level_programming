@@ -7,23 +7,18 @@
  * @i: integer value
  * Return: concatenated string
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-        char* dest_start = dest;
+	char *ptr;
 
-	while (n > 0 && *src != '\0')
+	ptr = dest;
+	while (n > 0)
 	{
-		*dest++ = *src++;
+		*dest = *src;
+		dest++;
+		src++;
 		n--;
 	}
 
-	while (n > 0)
-	{
-
-
-		*dest++ = '\0';
-	}
-
-
-	return (dest_start);
-
+	return (ptr);
+}
