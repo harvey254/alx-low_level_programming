@@ -4,7 +4,6 @@
  * @dest: string value
  * @src: string value
  * @n : number of bytes
- * @i: number of bytes
  * Return: concatenated string
  */
 char *_strncpy(char *dest, char *src, int n)
