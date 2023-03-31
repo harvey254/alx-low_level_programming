@@ -1,22 +1,34 @@
 #include "main.h"
-/**
- * _strncat - concatenates two strings
- * @dest: string value
- * @src: string value
- * @n : number of bytes
- * @i: integer value
- * Return: concatenated string
- */
-char *_strncat(char *dest, char *src, int n)
-{
-	int dest_len = strlen(dest);
-	int i;
+#include <string.h>
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
-	{
-		dest[dest_len + i] = src[i];
-	}
-	dest[dest_len + i] = '\0';
-	return (dest);
+/**
+ * *_strcat - See description
+ * @dest: char type string
+ * @src: char type string
+ * Description: Copy the string pointed to by pointer `src` to
+ * the buffer pointed to by `dest`
+ * Return: Pointer to `dest`
+ */
+
+char *_strcat(char *dest, char *src)
+{
+        char *p = dest;
+
+        while (*dest != '\0')
+        {
+                dest++;
+        }
+
+        while (*src != '\0' && n > 0)
+        {
+                *dest = *src;
+                dest++;
+                src++;
+		n--;
+        }
+
+        *dest = '\0';
+
+        return (p);
 }
 
