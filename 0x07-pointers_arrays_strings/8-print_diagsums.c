@@ -7,15 +7,16 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int sum1 = 0, sum2 = 0;
+	int main_diagonal = 0, other_diagonal = 0;
 
-	for (i = o, i < size; i++)
+	for (i = 0; i < size; i++)
 	{
+		main_diagonal += a[(i * size) + i];
 
-		sum1 += *(a + i * size + i);
-		sum2 += *(a + i * size + size - 1 - i);
+		other_diagonal += a[(i + 1) * (size - 1)];
 	}
 
-	printf("Sum of main diagonal: %d\n", sum1);
-	printf("Sum of secondary diagonal: %d\n", sum2);
+	printf("%d\n", sum1);
+
+	printf("%d\n", sum2);
 }
