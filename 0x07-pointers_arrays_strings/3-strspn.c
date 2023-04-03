@@ -1,34 +1,42 @@
 #include "main.h"
+#include <string.h>
 /**
  * _strspn - gets the length of a prefix substring
  * @s: pointer to string value
  * @accept: string value
  * Return: pointer to the memory s
  */
-int _strspn(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
-        unsigned int len = 0;
-	int found = 1;
+	int s_length = strlen(s);
 
-        while (*s !='\0' && found)
-        {
-                found = 0;
+	int accept_length = strlen(accept);
 
-		for (unsigned int i = 0; accept[i] != '\0'; i++)
+	int f, i, k, cnt = 0;
+
+	for (i = 0; i < s_length; i++)
+	{
+		f = 0;
+
+		for (k = 0; k < accept_length; k++)
 		{
-			if (*s == accept[i])
+			if (s[i] == accept[k])
 			{
-				len++;
-				found = 1;
+				f = 1;
+
 				break;
 			}
 		}
-		if (found)
-		{
-			s++;
-		}
-        }
 
-        return (len);
+		if (!found)
+		{
+			return (cnt);
+		}
+
+
+		cnt++;
+	}
+
+	return (cnt);
 }
 
