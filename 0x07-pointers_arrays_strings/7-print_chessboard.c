@@ -1,36 +1,21 @@
 #include "main.h"
 /**
- * _strstr - locates a substring
- * @haystack:
- * @neddle:
+ * print_chessboard - prints the chessboard
+ * @a: string value
  * Return: pointer to the beginning of the located substring
  */
-char *_strstr(char *haystacks, char *needle)
+void print_chessboard(char (*a)[8])
 {
-        char *start = haystack;
+	int i;
+	int k;
 
-        while (*start !='\0')
-        {
-                char *h = start;
-                char *n = needle;
+	for (i = 0; i < 8; i++)
+	{
+		for ( k = 0; k < 8; k++)
+		{
+			printf("%c", a[i][k]);
+		}
 
-                while (*n !='\0' && *h == *n)
-                {
-
-                        h++;
-
-                        n++;
-                }
-                if (*n == '\0')
-                {
-
-                        return (start);
-                }
-
-                start++;
-        }
-
-        return (NULL);
+		printf("\n");
+	}
 }
-
-
