@@ -17,7 +17,7 @@ void print_diagsums(int *a, int size)
 		other_diagonal += a[(i + 1) * (size - 1)];
 	}
 
-	printf("%d\n", sum1);
+	printf("%d\n", main_diagonal);
 
-	printf("%d\n", sum2);
+	printf("%d\n", other_diagonal);
 }
