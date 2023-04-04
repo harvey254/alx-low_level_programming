@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * _strpbrk - searches for a string for any set of bytes
  * @s: pointer to a string value
