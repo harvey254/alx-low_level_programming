@@ -6,7 +6,9 @@
  */
 void _print_rev_recursion(char *s)
 {
+	int i;
 	char temp = *s;
+
 	s[i] = s[i - 1];
 	s[i - 1] = temp;
 
