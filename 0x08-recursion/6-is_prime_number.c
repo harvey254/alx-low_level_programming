@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * is_prime_number - checks whether a number is prime 
- * @n: integer value
- * Return : 1 if prime number, 0 otherwise
+ *is_prime_number - checks whether a number is prime
+ *@n: integer value
+ *Return: 1 if prime number, 0 otherwise
  */
 int is_prime_number(int n)
 {
