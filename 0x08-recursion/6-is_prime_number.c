@@ -23,6 +23,6 @@ int is_prime_numben(int n)
 		return (0);
 	}
 
-	return (is_prime_number(n);
+	return (is_prime_number(n));
 }
 
