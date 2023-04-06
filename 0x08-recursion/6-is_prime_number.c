@@ -4,7 +4,7 @@
  * @n: integer value
  * Return : square root
  */
-int is_prime_numben(int n)
+int is_prime_number(int n)
 {
 	int i = 2;
 
