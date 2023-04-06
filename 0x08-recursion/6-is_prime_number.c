@@ -6,7 +6,9 @@
  */
 int is_prime_numben(int n)
 {
-        if (n < 2)
+	int i = 2;
+
+	if (n < 2)
         {
                 return (0);
         }
@@ -21,6 +23,6 @@ int is_prime_numben(int n)
 		return (0);
 	}
 
-	return (is_prime_number(n, i + 1)
+	return (is_prime_number(n);
 }
 
