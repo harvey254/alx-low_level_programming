@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <libgen.h>
 /**
  * main - a program that prints its name
  * @argc: number of command line arguments
@@ -10,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	printf("%s\n", basename(argv[0]));
+	printf("%s\n", argv[0]);
 
 	return (0);
 }
