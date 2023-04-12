@@ -7,18 +7,22 @@
  * Return: returns pointer to a newly space, NULL is str = NULL
  */
 
-char *_strdup(char *str) {
-    if (str == NULL) {
-        return NULL;
-    }
+char *_strdup(char *str)
+{
+	char *duplicate = malloc(strlen(str) + 1);
 
-    char *duplicate = (char*) malloc(strlen(str) + 1);
-    if (duplicate == NULL) {
-        return NULL;
-    }
+	if (str == NULL)
+	{
+		return (NULL);
+	}
 
-    strcpy(duplicate, str);
+	if (duplicate == NULL)
+	{
+		return (NULL);
+	}
 
-    return duplicate;
+	strcpy(duplicate, str);
+
+	return (duplicate);
 }
 
