@@ -5,31 +5,29 @@
  * _calloc - allocates memory for an array
  * @nmemb: number of elements
  * @size: integer value of bytes
- * Return: no value
+ * Return: returns pointer to allocated memory
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *ptr;
 	unsigned int total_size;
 
+	if (nmemb == 0 || size == 0)
+	{
+		return (NULL);
+	}
+
 	total_size = nmemb * size;
 	ptr = malloc(total_size)
 
-		if (nmemb == 0 || size == 0)
+		if (ptr == NULL)
 		{
 			return (NULL);
 		}
 
-		else if (ptr == NULL)
-		{
-			return (NULL);
-		}
+	memset(ptr, 0, total_size);
 
-		else
-		{
-			memset(ptr, 0, total_size);
+	return (ptr);
 
-			return (ptr);
-		}
 }
 
