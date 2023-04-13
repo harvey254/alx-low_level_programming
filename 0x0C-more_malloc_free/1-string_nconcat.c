@@ -15,8 +15,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	ln1 = strlen(s1);
 	ln2 = strlen(s2);
-	copylen = (len2 < n) ? len2 : n;
-	result = malloc(len1 + copylen + 1);
+	copylen = (ln2 < n) ? ln2 : n;
+	result = malloc(ln1 + copyln + 1);
 
 	if (s1 == NULL)
 	{
@@ -33,11 +33,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 
-	memcpy(result, s1, len1);
+	memcpy(result, s1, ln1);
 
-	memcpy(result + len1, s2, copylen);
+	memcpy(result + ln1, s2, copyln);
 
-	result[len1 + copylen] = '\0';
+	result[ln1 + copyln] = '\0';
 
 	return (result);
 }
