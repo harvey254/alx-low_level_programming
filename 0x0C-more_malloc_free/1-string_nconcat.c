@@ -39,9 +39,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		return (NULL);
 	}
 
-	memcpy(result, s1, ln1);
+	strncpy(result, s1, ln1);
 
-	memcpy(result + ln1, s2, n);
+	strncpy(result + ln1, s2, n);
 
 	result[result_len - 1] = '\0';
 
