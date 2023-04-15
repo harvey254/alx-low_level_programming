@@ -1,49 +1,64 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * argstostr - 
- * @ac
- * @av
- * Return:
+ * argstostr - concatenates all the arguments
+ * @ac: number of arguments
+ * @av: array
+ * Return: pointer to a new string, NULL if it fails
  */
 
-char *argstostr(int ac, char **av) {
-    // Return NULL if ac == 0 or av == NULL
-    if (ac == 0 || av == NULL) {
-        return NULL;
-    }
+char *argstostr(int ac, char **av)
+{
+	int total_length, i, j, k, index;
+	char *result;
 
-    // Calculate the total length of the concatenated string
-    int total_length = 0;
-    for (int i = 0; i < ac; i++) {
-        int j = 0;
-        while (av[i][j] != '\0') {
-            total_length++;
-            j++;
-        }
-        total_length++;
-    }
+	if (ac == 0 || av == NULL)
+		return NULL;
 
-    // Allocate memory for the concatenated string
-    char *result = (char*) malloc(sizeof(char) * (total_length + 1));
-    if (result == NULL) {
-        return NULL;
-    }
+	total_length = 0;
 
-    // Copy the arguments into the concatenated string
-    int index = 0;
-    for (int i = 0; i < ac; i++) {
-        int j = 0;
-        while (av[i][j] != '\0') {
-            result[index] = av[i][j];
-            index++;
-            j++;
-        }
-        result[index] = '\n';
-        index++;
-    }
-    result[index] = '\0';
+	for (i = 0; i < ac; i++)
+	{
+	       	j = 0;
 
-    return result;
+		while (av[i][j] != '\0')
+		{
+			total_length++;
+			j++;
+		}
+
+		total_length++;
+	}
+
+	result = (char*) malloc(sizeof(char) * (total_length + 1));
+
+	if (result == NULL)
+	{
+		return (NULL);
+	}
+
+       	index = 0;
+
+	for (i = 0; i < ac; i++)
+
+	{
+	    j = 0;
+
+	    while (av[i][j] != '\0')
+	    {
+		    result[index] = av[i][j];
+		    index++;
+		    j++;
+	    }
+
+	    result[index] = '\n';
+	    index++;
+
+
+	}
+
+	result[index] = '\0';
+
+	return (result);
 }
 
