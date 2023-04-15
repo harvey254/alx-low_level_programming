@@ -2,34 +2,47 @@
 #include <string.h>
 #include "main.h"
 /**
- * str_concat - 
- * @s1:
- * @s2:
- * Return:
+ * str_concat - cocatenates strings
+ * @s1: string value
+ * @s2: string value
+ * Return: concatenated string
  */
 
-char *str_concat(char *s1, char *s2) {
-    // If either s1 or s2 is NULL, treat it as an empty string
-    if (s1 == NULL) {
-        s1 = "";
-    }
-    if (s2 == NULL) {
-        s2 = "";
-    }
+char *str_concat(char *s1, char *s2)
+{
+	if (s1 == NULL)
+		s1 = "";
 
-    size_t s1_len = strlen(s1);
-    size_t s2_len = strlen(s2);
+	if (s2 == NULL)
+		s2 = "";
 
-    // Allocate memory for the concatenated string, including the null terminator
-    char *concatenated = (char*) malloc(sizeof(char) * (s1_len + s2_len + 1));
-    if (concatenated == NULL) {
-        return NULL;
-    }
+	while (s1[i] != '\0')
+		i++;
 
-    // Copy the contents of s1 and s2 into the concatenated string
-    strcpy(concatenated, s1);
-    strcat(concatenated, s2);
+	while (s2[k] != '\0')
+		k++;
 
-    return concatenated;
+	concatenated = malloc(sizeof(char) * (i + k + 1));
+
+	if (concatenated == NULL)
+		return (NULL);
+
+	while (s1[i] != '\0')
+	{
+		concatenated[i] = s1[i];
+		i++;
+
+	}
+
+	while (s2[k] != '\0')
+	{
+		concatenated[k] = s2[k];
+		i++, k++;
+
+	}
+
+	concatenated[i] = '\0';
+
+	return (concatenated);
 }
 
