@@ -11,17 +11,14 @@
 int main(int argc, char *argv[])
 {
 	int i, j, res;
+	char *arg;
 
 	if (argc < 2)
-	{
 		printf("0\n");
-
-		return (0);
-	}
 
 	for (i = 1; i < argc; i++)
 	{
-		char *arg = argv[i];
+	       	*arg = argv[i];
 
 		for (j = 0; arg[j] != '\0'; j++)
 		{
