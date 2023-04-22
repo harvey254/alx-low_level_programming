@@ -1,69 +1,96 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include "variadic_functions.h"
 
+/**
+ * print_char - Prints a char
+ * @ap: Argument pointer
+ */
+void print_char(va_list ap)
+{
+	printf("%c", va_arg(ap, int));
+}
+
+/**
+ * print_integer - Prints an integer
+ * @ap: Argument pointer
+ */
+void print_integer(va_list ap)
+{
+	printf("%d", va_arg(ap, int));
+}
+
+/**
+ * print_float - Prints a float
+ * @ap: Argument pointer
+ */
+void print_float(va_list ap)
+{
+	printf("%f", va_arg(ap, double));
+}
+
+/**
+ * print_string - Prints a string
+ * @ap: Argument pointer
+ */
+void print_string(va_list ap)
+{
+	char *s = va_arg(ap, char *);
+
+	if (!s)
+	{
+		printf("(nil)");
+		return;
+	}
+
+	printf("%s", s);
+}
+
+/**
+ * print_all - Prints anything
+ * @format: Types of arguments passed to function
+ */
 void print_all(const char * const format, ...)
 {
-	va_list args;
-
-	va_start(args, format);
-
+	print_type types[] = {
+		{"c", print_char},
+		{"i", print_integer},
+		{"f", print_float},
+		{"s", print_string},
+		{NULL, NULL}
+	};
+	va_list ap;
+	char *separator = "";
 	int i = 0;
-	char c;
-	char *s;
-	float f;
+	int j = 0;
+
+	va_start(ap, format);
 
 	while (format && format[i])
 	{
-		switch (format[i])
+		while (types[j].type)
 		{
-			case 'c':
-				c = (char) va_arg(args, int);
-
-				printf("%c", c);
-				break;
-
-			case 'i':
-				i = va_arg(args, int);
-
-				printf("%d", i);
-				break;
-
-			case 'f':
-				f = (float) va_arg(args, double);
-
-				printf("%f", f);
-				break;
-
-			case 's':
-				s = va_arg(args, char *);
-				if (s == NULL)
-				{
-					printf("(nil)");
-				}
-				else
-				{
-					printf("%s", s);
-				}
-				break;
-		}
-
-		i++;
-
-		if (format[i])
-		{
-			int j = i;
-			while (format[j] && format[j] != 'c' && format[j] != 'i' && format[j] != 'f' && format[j] != 's')
+			if (*types[j].type == format[i])
 			{
-				j++;
+				printf("%s", separator);
+
+				types[j].f(ap);
+
+				separator = ", ";
 			}
 
-			if (format[j])
-			{
-				printf(", ");
-			}
+			++j;
 		}
+
+		j = 0;
+
+		++i;
+
 	}
-	va_end(args);
+
 	printf("\n");
+
+	va_end(ap);
+}
 }
 
