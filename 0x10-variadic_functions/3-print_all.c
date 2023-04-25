@@ -1,5 +1,6 @@
 #include <stdarg.h>
 #include <stdio.h>
+#include <string.h>
 #include "variadic_functions.h"
 
 /**
@@ -37,7 +38,7 @@ void print_string(va_list ap)
 {
 	char *s = va_arg(ap, char *);
 
-	if (!s)
+	if (s == NULL)
 	{
 		printf("(nil)");
 		return;
@@ -52,29 +53,30 @@ void print_string(va_list ap)
  */
 void print_all(const char * const format, ...)
 {
-	print_type types[] = {
+	va_list ap;
+        char *separator = "";
+        int i = 0;
+        int j = 0;
+
+	print_type arr[] = {
 		{"c", print_char},
 		{"i", print_integer},
 		{"f", print_float},
 		{"s", print_string},
 		{NULL, NULL}
 	};
-	va_list ap;
-	char *separator = "";
-	int i = 0;
-	int j = 0;
 
 	va_start(ap, format);
 
 	while (format && format[i])
 	{
-		while (types[j].type)
+		while (arr[j].type)
 		{
-			if (*types[j].type == format[i])
+			if (*arr[j].type == format[i])
 			{
 				printf("%s", separator);
 
-				types[j].f(ap);
+				arr[j].f(ap);
 
 				separator = ", ";
 			}
