@@ -54,9 +54,9 @@ void print_string(va_list ap)
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-        char *separator = "";
-        int i = 0;
-        int j = 0;
+	char *separator = "";
+	int i = 0;
+	int j = 0;
 
 	print_type arr[] = {
 		{"c", print_char},
