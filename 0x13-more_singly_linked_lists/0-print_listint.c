@@ -4,7 +4,7 @@
 #include <stddef.h>
 /**
  * print_listint -> prints all the elements of a list
- * @h: singly linked lists
+ * @h: pointer to singly linked list
  *
  * Return: number of nodes
  */
