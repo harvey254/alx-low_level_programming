@@ -1,6 +1,7 @@
 #include "lists.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 /**
  * pop_listint -> deletes the head node os the list
  * and returns the head nodes data
