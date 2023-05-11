@@ -3,6 +3,7 @@
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include "main.h"
 /**
  * create_file - creates a file 
  * @filename: name for file to create
