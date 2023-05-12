@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * set_bit - sets the value of a bit at index,
  * starting from least bit at 0
