@@ -1,0 +1,38 @@
+# 0 "/home/harvey/alx-low_level_programming/0x08-recursion/0-puts_recursion.c"
+# 1 "/home/harvey/alx-low_level_programming/0x08-recursion//"
+# 0 "<built-in>"
+# 0 "<command-line>"
+# 1 "/home/harvey/alx-low_level_programming/0x08-recursion/0-puts_recursion.c"
+# 1 "/home/harvey/alx-low_level_programming/0x08-recursion/main.h" 1
+
+
+void _puts_recursion(char *s);
+void _puts_recursion(char *s);
+void _print_rev_recursion(char *s);
+int _strlen_recursion(char *s);
+int factorial(int n);
+int _pow_recursion(int x, int y);
+int _sqrt_recursion(int n);
+int is_prime_number(int n);
+int is_palindrome(char *s);
+int wildcmp(char *s1, char *s2);
+int _putchar(char c);
+# 2 "/home/harvey/alx-low_level_programming/0x08-recursion/0-puts_recursion.c" 2
+
+
+
+
+
+void _puts_recursion(char *s)
+{
+ if (*s == '\0')
+ {
+  _putchar('\n');
+
+  return;
+ }
+
+ _putchar(*s);
+
+ _puts_recursion(s + 1);
+}
