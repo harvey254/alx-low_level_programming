@@ -7,6 +7,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <string.h>
+#include <stddef.h>
 
 void print_error_and_exit(int code, const char *message);
 void print_elf_header_info(Elf64_Ehdr *elf_header);
