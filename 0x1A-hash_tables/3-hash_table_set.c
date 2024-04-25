@@ -64,4 +64,5 @@ hash_node_t *_node_(const char *key, const char *value)
 		return (NULL);
 
 	new_node->key = strdup(key);
+}
 
